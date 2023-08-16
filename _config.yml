@@ -8,13 +8,13 @@ output: web
 topnav_title: Dev note.
 # this appears on the top navigation bar next to the home button
 
-site_title: Jekyll theme for documentation
+site_title: Dev note. Doc
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: Copyright 2021 Google LLC
 # this appears in the footer
 
-github_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
+github_editme_path:
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 # gitlab_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
@@ -40,7 +40,7 @@ feedback_subject_line: bfh3000 blog feedback
 feedback_email: bfh3000@naver.com
 # used as a contact email for the Feedback link in the top navigation bar
 
-# feedback_disable: true
+feedback_disable: true
 # if you uncomment the previous line, the Feedback link gets removed
 
 # feedback_text: "Need help?"
