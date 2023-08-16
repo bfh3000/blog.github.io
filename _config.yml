@@ -1,4 +1,4 @@
-incremental: true
+# incremental: true
 
 repository: https://bfh3000.github.io/blog.github.io/
 

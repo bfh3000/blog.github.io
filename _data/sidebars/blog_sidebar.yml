@@ -9,16 +9,7 @@ entries:
     output: web
     folderitems:
     - title: common
-      url: /news.html
-      output: web
-    - title: Theme instructions
-      url: /mydoc_introduction.html
-      output: web
-    - title: Product 1
-      url: /p1_landing_page.html
-      output: web
-    - title: Product 2
-      url: /p2_landing_page.html
+      url: /first.html
       output: web
 
 # Copyright 2021 Google LLC

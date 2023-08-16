@@ -7,17 +7,13 @@ topnav:
         external_url: https://bfh3000.github.io/blog.github.io/
       - title: News
         url: /news
+      - title: blog
+        url: /blog.html
 
 #Topnav dropdowns
 topnav_dropdowns:
   - title: Topnav dropdowns
     folders:
-      - title: blog
-        folderitems:
-          - title: common
-            url: /common
-          - title: common2
-            url: /common2
       - title: Products
         folderitems:
           - title: Jekyll Documentation Theme

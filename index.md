@@ -1,9 +1,18 @@
 ---
 title: "modified index"
 keywords: sample homepage
-tags: [index]
-sidebar: mydoc_sidebar
+sidebar: blog_sidebar
 permalink: index.html
-summary: These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
+
+tags: [index]
+summary: null.
 ---
 
+## Index 1
+index1 content
+
+## Index 2
+index2 content
+
+## Index 3  
+index3 content
