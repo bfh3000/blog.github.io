@@ -8,7 +8,7 @@ topnav:
       - title: News
         url: /news
       - title: blog
-        url: /blog.html
+        url: /tag_blog.html
 
 #Topnav dropdowns
 topnav_dropdowns:
