@@ -6,11 +6,11 @@ topnav:
       - title: GitHub
         external_url: https://bfh3000.github.io/blog.github.io/
       - title: Post
-        url: /post_md.html
+        url: /post_page.html
 
 #Topnav dropdowns
 topnav_dropdowns:
-  - title: Topnav dropdowns
+  - title: Topnav drop downs
     folders:
       - title: News
         folderitems:

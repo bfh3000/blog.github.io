@@ -99,11 +99,8 @@ defaults:
       sidebar: home_sidebar
       topnav: topnav
 
-# these are defaults used for the frontmatter for these file types
-
 sidebars:
-- blog_sidebar
-- home_sidebar
+- post_sidebar
 - mydoc_sidebar
 - product1_sidebar
 - product2_sidebar
@@ -121,3 +118,5 @@ github: [metadata]
 
 
 # Copyright 2021 Google LLC
+
+# these are defaults used for the frontmatter for these file types
