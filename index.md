@@ -4,7 +4,7 @@ keywords: sample homepage
 sidebar: blog_sidebar
 permalink: index.html
 
-tags: [index]
+tags: [blog]
 summary: null.
 ---
 
