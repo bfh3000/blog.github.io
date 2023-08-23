@@ -5,12 +5,6 @@ entries:
     product: Category
     levels: one
     folders:
-      - title: Home
-        output: web
-        folderitems:
-          - title: ............................................................
-            url: /post_page.html
-            output: web
       - title: Language
         output: web
         folderitems:
