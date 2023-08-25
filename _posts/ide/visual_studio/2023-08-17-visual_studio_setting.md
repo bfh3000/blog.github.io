@@ -2,7 +2,6 @@
 title: Visual Studio Custom Setting
 published: true
 sidebar: post_sidebar
-permalink: visual_studio_setting.html
 folder: visual_studio
 tags: [blog]
 ---

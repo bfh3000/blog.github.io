@@ -2,7 +2,7 @@
 title: "modified index"
 keywords: sample homepage
 sidebar: blog_sidebar
-permalink: index.html
+
 
 tags: [blog]
 summary: null.
