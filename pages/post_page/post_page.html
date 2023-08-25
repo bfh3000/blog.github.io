@@ -7,11 +7,23 @@ toc: false
 
 {% assign subdirs = '_posts' | subdirectories %}
 <ul>
-  {% for subdir in subdirs %}
+    {% for subdir in subdirs %}
     <li>{{ subdir }}</li>
-  {% endfor %}
+    {% endfor %}
+</ul>
+mmmm
+<br>
+
+{% assign folder_path = '_posts/java/thread' %}
+<ul>
+    {% assign files = folder_path | file_list %}
+    {% for file in files %}
+    <li>{{ file }}</li>
+    {% endfor %}
 </ul>
 
+mmmm
+<br>
 <div class="home">
     <div class="post-list">
         {% for post in site.posts limit:1000 %}
