@@ -1,19 +1,17 @@
-{% assign subdirs = '_posts' | subdirectories %}
-
 <ul id="mysidebar" class="nav">
     <li class="sidebarTitle">Catogory v1.0</li>
     <li class="active">
         <a title="HOME" href="post_page.html">HOME</a>
     </li>
-
+    {% assign subdirs = '_posts' | subdirectories %} <!-- 0단 : 디렉터리 폴더 -->
     {% for subdir in subdirs %}
     {% assign second_folder = subdir | remove_first: "_posts/" %}
     <li>
-        <a title="{{subdir}}" href="#">{{second_folder}}</a>
+        <a title="{{subdir}}" href="#">{{second_folder}}</a> <!-- 1단 : 디렉터리 폴더 -->
         <ul>
             {% assign subdir_childs = subdir | subdirectories %}
             {% for subdir_child in subdir_childs %}
-                {% if subdir_child == "00" %} <!-- 1단 : 디렉터리 파일-->
+                {% if subdir_child == "00" %} <!-- 1단 : 디렉터리 파일 -->
                     {% assign files = subdir | fileList %}
                     {% for file in files %}
                         <li>
@@ -21,18 +19,16 @@
                         </li>
                     {% endfor %}
                 {% else %}
-                    <li>
-                        {% assign subdir_childs = subdir | subdirectories %}
-                        <a title="" href="#">{{subdir_child | remove_first: "_posts/" | remove_first: second_folder | remove_first: "/" }} </a>
-                        <ul>
-                            <li>
-                                <a title="" href="#">1</a>
-                            </li>
-                            <li>
-                                <a title="" href="#">2</a>
-                            </li>
-                        </ul>
-                    </li>
+                        <li>
+                            {% assign subdir_child_origin = subdir_child %}
+                            <a title="" href="#">{{subdir_child | remove_first: "_posts/" | remove_first: second_folder | remove_first: "/" }} </a> <!-- 2단 : 디렉터리 폴더 -->
+                            <ul>
+                                {% assign folder2_files = subdir_child_origin | fileList %}
+                                {% for folder2_file in folder2_files %}
+                                    <li>{{folder2_file}}</li>
+                                {% endfor %}
+                            </ul>
+                        </li>
                 {% endif %}
             {% endfor %}
         </ul>
