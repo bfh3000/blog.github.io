@@ -1,0 +1,50 @@
+{% assign subdirs = '_posts' | subdirectories %}
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Catogory v1.0</li>
+    <li class="active">
+        <a title="HOME" href="post_page.html">HOME</a>
+    </li>
+
+    {% for subdir in subdirs %}
+    {% assign second_folder = subdir | remove_first: "_posts/" %}
+    <li>
+        <a title="{{subdir}}" href="#">{{second_folder}}</a>
+        <ul>
+            {% assign subdir_childs = subdir | subdirectories %}
+            {% for subdir_child in subdir_childs %}
+                {% if subdir_child == "00" %} <!-- 1단 : 디렉터리 파일-->
+                    {% assign files = subdir | fileList %}
+                    {% for file in files %}
+                        <li>
+                            <a title="" href="#">{{file}}</a>
+                        </li>
+                    {% endfor %}
+                {% else %}
+                    <li>
+                        {% assign subdir_childs = subdir | subdirectories %}
+                        <a title="" href="#">{{subdir_child | remove_first: "_posts/" | remove_first: second_folder | remove_first: "/" }} </a>
+                        <ul>
+                            <li>
+                                <a title="" href="#">1</a>
+                            </li>
+                            <li>
+                                <a title="" href="#">2</a>
+                            </li>
+                        </ul>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+
+    <p class="external">
+        <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+    </p>
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+{% comment %} Copyright 2021 Google LLC {% endcomment %}
