@@ -3,29 +3,31 @@
     <li class="active">
         <a title="HOME" href="post_page.html">HOME</a>
     </li>
-    {% assign subdirs = '_posts' | subdirectories %} <!-- 0단 : 디렉터리 폴더 -->
-    {% for subdir in subdirs %}
-    {% assign second_folder = subdir | remove_first: "_posts/" %}
+    {% assign _posts_folders = '_posts' | subdirectories %} <!-- 0단 : 디렉터리 폴더 -->
+    {% for _posts_folder in _posts_folders %}
+    {% assign _posts_folder_trim = _posts_folder | remove_first: "_posts/" %}
     <li>
-        <a title="{{subdir}}" href="#">{{second_folder}}</a> <!-- 1단 : 디렉터리 폴더 -->
+        <a title="" href="#">{{_posts_folder_trim}}</a> <!-- 1단 : 디렉터리 폴더 -->
         <ul>
-            {% assign subdir_childs = subdir | subdirectories %}
-            {% for subdir_child in subdir_childs %}
-                {% if subdir_child == "00" %} <!-- 1단 : 디렉터리 파일 -->
-                    {% assign files = subdir | fileList %}
-                    {% for file in files %}
+            {% assign _posts_folder_folders = _posts_folder | subdirectories %}
+            {% for _posts_folder_folder in _posts_folder_folders %}
+                {% if _posts_folder_folder == "00" %} <!-- 1단 : 디렉터리 파일 -->
+                    {% assign _posts_folder_files = _posts_folder | fileList %}
+                    {% for _posts_folder_file in _posts_folder_files %}
                         <li>
-                            <a title="" href="#">{{file}}</a>
+                            <a title="" href="#">{{_posts_folder_file}}</a>
                         </li>
                     {% endfor %}
                 {% else %}
                         <li>
-                            {% assign subdir_child_origin = subdir_child %}
-                            <a title="" href="#">{{subdir_child | remove_first: "_posts/" | remove_first: second_folder | remove_first: "/" }} </a> <!-- 2단 : 디렉터리 폴더 -->
+                            {% assign _posts_folder_folder_trim = _posts_folder_folder | remove_first: "_posts/" | remove_first: _posts_folder_trim | remove_first: "/" %}
+                            <a title="" href="#">{{_posts_folder_folder_trim}}</a> <!-- 2단 : 디렉터리 폴더 -->
                             <ul>
-                                {% assign folder2_files = subdir_child_origin | fileList %}
-                                {% for folder2_file in folder2_files %}
-                                    <li>{{folder2_file}}</li>
+                                {% assign _posts_folder_folder_files = _posts_folder_folder | fileList %}
+                                {% for _posts_folder_folder_file in _posts_folder_folder_files %}
+                                    <li>
+                                        <a title="" href="#">{{_posts_folder_folder_file}}</a>
+                                    </li>
                                 {% endfor %}
                             </ul>
                         </li>
