@@ -11,7 +11,11 @@ module Jekyll
   end
 
   def fileList(input)
-    Dir.glob(File.join(input, '*')).select { |f| File.file?(f) }.map { |f| File.basename(f) }
+    Dir.glob(File.join(input, '*')).select {
+      |f| File.file?(f)
+    }.map {
+         |f| File.basename(f)
+       }
   end
 end
 
