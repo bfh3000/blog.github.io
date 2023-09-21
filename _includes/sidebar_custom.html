@@ -17,7 +17,7 @@
                         {% assign part = _posts_folder_file | split: "-" %}
                         {% assign extracted_part_a = part[3] | remove: ".md" %}
                         <li>
-                            <a href="{{extracted_part_a}}">{{_posts_folder_file}}</a>
+                            <a href="{{extracted_part_a}}">{{extracted_part_a}}</a>
                         </li>
                     {% endfor %}
                 {% else %}
@@ -30,7 +30,7 @@
                                     {% assign parts = _posts_folder_folder_file | split: "-" %}
                                     {% assign extracted_part = parts[3] | remove: ".md" %}
                                     <li>
-                                        <a href="{{extracted_part}}">{{_posts_folder_folder_file}}</a>
+                                        <a href="{{extracted_part}}">{{extracted_part}}</a>
                                     </li>
                                 {% endfor %}
                             </ul>
