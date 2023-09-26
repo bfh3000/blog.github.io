@@ -1,5 +1,6 @@
 ---
 title: visual studio export setting
+sidebar: blog_sidebar
 ---
 
 # export
