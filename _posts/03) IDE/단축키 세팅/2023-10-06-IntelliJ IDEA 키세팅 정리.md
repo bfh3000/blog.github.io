@@ -1,5 +1,6 @@
 ---
-title: 
+title: IntelliJ_idea_키세팅
+sidebar: blog_sidebar 
 ---
 
 # 키세팅 정리
